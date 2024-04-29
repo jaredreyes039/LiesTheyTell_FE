@@ -9,7 +9,7 @@ export default function Home() {
     <main className="py-6 px-6 flex max-h-screen overflow-x-hidden overflow-y-scroll min-h-screen ">
       <NavBar />
       <ArticleProvider>
-        <div className="flex flex-col">
+        <div className="max-w-[1540px] flex flex-col">
           <LandingSection />
           <LatestArticles />
         </div>

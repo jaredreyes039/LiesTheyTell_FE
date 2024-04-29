@@ -15,7 +15,7 @@ export default function MdArticleContainer(props) {
 	return (
 		<div className="duration-150 hover:opacity-75 mb-4">
 			<FullContainer>
-				<div className='w-2/3'>
+				<div className='w-2/3 mr-12'>
 					<FullContainer>
 						<div className="w-full flex flex-col">
 							<div className="w-full mb-4 ">
