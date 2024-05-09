@@ -45,6 +45,7 @@ export default function FeatArticles(props) {
 						return (
 							<>
 								<SmArticleContainer
+									artid={post.id}
 									key={"feat-" + idx}
 									title={post.attributes.Title}
 									hdlnr={post.attributes.Headliner}

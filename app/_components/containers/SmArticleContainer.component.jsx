@@ -1,3 +1,4 @@
+'use client'
 import PropTypes from 'prop-types';
 import FullContainer from './FullContainer.component';
 import MdContainer from './MdContainer.component';
@@ -6,17 +7,24 @@ import Image from 'next/image';
 import HeaderText from '../text/HeaderText.component';
 import SubHeaderText from '../text/SubHeaderText.component';
 import SmContainer from './SmContainer.component';
+import { useRouter } from 'next/navigation';
 
 export default function SmArticleContainer(props) {
 
-	const { cat, src, alt, title, hdlnr } = props;
+	const { artid, cat, src, alt, title, hdlnr } = props;
+	const ROUTER = useRouter();
+
+	function handleNavToArticle(e) {
+		e.preventDefault();
+		ROUTER.push(`articles/${artid}`);
+	}
 
 	return (
-		<div className="duration-150 hover:opacity-75">
-			<FullContainer >
+		<div className="sm:max-xl:mb-4 duration-150 hover:opacity-75">
+			<FullContainer col>
 				<SmContainer >
-					<div className="w-full flex flex-col mr-4">
-						<div className="w-full mb-2 border-r-2 border-black">
+					<div className="w-full flex flex-col mr-4" onClick={(e) => { handleNavToArticle(e) }}>
+						<div className="w-full mb-2">
 							<CategoryText text={cat.toUpperCase()} />
 						</div>
 						<div className="aspect-square w-full relative">
@@ -28,7 +36,9 @@ export default function SmArticleContainer(props) {
 				</SmContainer>
 				<FullContainer >
 					<div className="w-full flex flex-col">
-						<HeaderText small text={title} />
+						<div onClick={(e) => { handleNavToArticle(e) }}>
+							<HeaderText small text={title} />
+						</div>
 						<div>
 							<SubHeaderText small text={hdlnr} />
 						</div>

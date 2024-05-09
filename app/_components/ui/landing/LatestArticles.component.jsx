@@ -30,12 +30,13 @@ export default function LatestArticles(props) {
 			<HeaderText text={"The Latest"} />
 			<hr className="mb-4 border-1 border-black opacity-25 w-full"></hr>
 			<FullContainer>
-				<div className="w-full px-12 py-6 h-full flex flex-col ">
+				<div className="w-full md:px-12 md:py-6 h-full flex flex-col ">
 					{posts.data.map((post, idx) => {
 						if (idx <= paginateCnt) {
 							return (
 								<>
 									<MdArticleContainer
+										artid={post.id}
 										key={"latest-" + idx}
 										title={post.attributes.Title}
 										hdlnr={post.attributes.Headliner}

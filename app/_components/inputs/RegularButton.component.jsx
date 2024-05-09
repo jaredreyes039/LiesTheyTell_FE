@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 export default function RegularButton(props) {
 
-	const { width, label, clickHandler, navLoc } = props;
+	const { width, left, label, clickHandler, navLoc } = props;
 
 	return (
 		<button
@@ -20,6 +20,7 @@ export default function RegularButton(props) {
 			hover:bg-gray-100
 			hover:bg-opacity-10
 			hover:scale-105
+			${left ? 'text-left' : 'text-center'}
 			`
 			}
 			onClick={(e) => { clickHandler(e) }}

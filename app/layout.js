@@ -4,7 +4,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "DEV.LOG",
+  title: "LiesTheyTell",
   description:
     "A blog dedicated to inspiring a more positive and helpful community around various technical niches from Linux, to programming, and even ROM hacking. A blog ready to serve you the latest in positive community news, updates, and more- DEV.LOG.",
   keywords: [
@@ -12,11 +12,8 @@ export const metadata = {
     "Dev",
     "Blog",
     "Tech",
-    "How to program",
     "Programming",
     "Programmer",
-    "Top Developer",
-    "Developer tips",
     "Tech tips",
     "Tips",
     "Programming advice",
@@ -33,7 +30,6 @@ export const metadata = {
     "Pokemon ROM Hacking",
     "Tech Community",
     "Online community",
-    "Positive community",
   ],
 };
 

@@ -31,11 +31,10 @@ export default function ArticleProvider(props) {
 		setSpotlight({ data: spotlight })
 	}, [articles])
 
-
 	return (
 		<articleContext.Provider value={{
 			articles,
-			spotlight
+			spotlight,
 		}}>
 			{props.children}
 		</articleContext.Provider>

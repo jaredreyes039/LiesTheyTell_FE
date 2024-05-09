@@ -7,7 +7,9 @@
   --background-start-rgb: #F2F2F2;
   --background-end-rgb: 255, 255, 255;
 }
-
+.bm-overlay {
+  display: none;
+}
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -21,6 +23,27 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .art-content > p > img {
+    @apply mb-8;
+    @apply w-full;
+  }
+  .art-content > h2 {
+    @apply mb-6;
+    @apply font-bold;
+    @apply w-full;
+    @apply text-black;
+    @apply max-md:text-3xl;
+    @apply md:text-6xl;
+  }
+  .art-content > p {
+    text-align: justify;
+    @apply mb-4;
+    @apply w-full;
+    @apply leading-loose;
+    @apply text-black;
+    @apply max-md:text-lg;
+    @apply md:text-xl;
   }
 }
 

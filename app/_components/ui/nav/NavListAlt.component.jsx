@@ -3,14 +3,14 @@ import { useRouter } from "next/navigation";
 import AttentionButton from "../../inputs/AttentionButton.component";
 import RegularButton from "../../inputs/RegularButton.component";
 
-export default function NavList(props) {
+export default function NavListAlt(props) {
 
 	const { basis, routes } = props;
 	const ROUTER = useRouter();
 
 	function handleNav(e) {
 		if (e.currentTarget.id !== "/") {
-			ROUTER.push(e.currentTarget.id)
+			ROUTER.replace(e.currentTarget.id)
 		}
 		else {
 			ROUTER.replace("/")
@@ -20,8 +20,8 @@ export default function NavList(props) {
 	function openTruncMenu(e) {
 		e.preventDefault();
 		console.log("open")
-		let element = document.getElementById("art-trunc");
-		let arrow = document.getElementById("art-trunc-arrow")
+		let element = document.getElementById("art-trunc-alt");
+		let arrow = document.getElementById("art-trunc-arrow-alt")
 		if (element.classList.contains("close-menu")) {
 			element.classList.remove("close-menu")
 			element.classList.add("open-menu")
@@ -60,9 +60,9 @@ export default function NavList(props) {
 									label={route.name}
 									clickHandler={openTruncMenu}
 								/>
-								<div id="art-trunc-arrow" className="rotate-180 font-black">^</div>
+								<div id="art-trunc-arrow-alt" className="rotate-180 font-black">^</div>
 							</div>
-							<div id="art-trunc" className="pl-4 close-menu">
+							<div id="art-trunc-alt" className="pl-4 close-menu">
 								{route.subroutes.map((sr, idx) => {
 									return (
 										<>

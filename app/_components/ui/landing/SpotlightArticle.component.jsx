@@ -24,8 +24,10 @@ export default function SpotlightArticle(props) {
 	}
 
 	return (
-		<div className="h-fit px-12 py-6">
+		<div className="lg:px-12 lg:py-6">
 			{spotlight.data.length > 0 && <LgArticleContainer
+				respCol
+				artid={spotlight.data[0].id}
 				title={spotlight.data[0].attributes.Title}
 				hdlnr={spotlight.data[0].attributes.Headliner}
 				src={`http://localhost:1337${spotlight.data[0].attributes.Media.data[0].attributes.url}`}
